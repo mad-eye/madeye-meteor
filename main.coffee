@@ -1,2 +1,7 @@
 madeye = Npm.require("madeye")
-madeye.execute process.cwd(), false, null, true
+madeye.execute
+  directory: process.cwd()
+  clean: false
+  ignorefile: null
+  tunnel: true
+  shareOutput: true
