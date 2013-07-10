@@ -16,3 +16,4 @@ if process.env["NODE_ENV"] == "development"
     tunnel: true
     shareOutput: true
     appPort: process.env["PORT"]
+    captureViaDebugger: true
