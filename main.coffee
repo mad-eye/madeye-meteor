@@ -3,6 +3,7 @@
 # process.env.MADEYE_AZKABAN_HOST="madeye.io:4004"
 # process.env.MADEYE_AZKABAN_URL="http://"+process.env.MADEYE_AZKABAN_HOST
 
+#only run madeye in meteor development environments
 if process.env["NODE_ENV"] == "development"
   madeye = Npm.require("madeye")
   # TODO this needs to be able to run multiple times
@@ -17,3 +18,4 @@ if process.env["NODE_ENV"] == "development"
     shareOutput: true
     appPort: process.env["PORT"]
     captureViaDebugger: false
+    linkToMeteorProcess: true
